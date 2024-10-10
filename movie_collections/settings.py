@@ -83,27 +83,43 @@ TEMPLATES = [
 WSGI_APPLICATION = 'movie_collections.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# database in docker
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL', 
-        'postgres://postgres@localhost:5432/movie_collection')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'movie_collection',
+        'USER': 'movie_controler', 
+        'PASSWORD': 'postgres',   
+        'HOST': 'db',
+        'PORT': '5432',
+    }
 }
 
 
+# # database in local machine
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  
+#         'NAME': 'movie_collection',                 
+#         'USER': 'postgres',                        
+#         'PASSWORD': '',                             
+#         'HOST': 'localhost',                         
+#         'PORT': '5432',                           
+#     }
+# }
+
+
+# Redis settings
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://redis:6379/1', 
+        'LOCATION': config('REDIS_URL', default='redis://127.0.0.1:6379/1'),  # Fallback for local development
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
     }
 }
-
 
 
 
