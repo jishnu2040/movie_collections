@@ -6,6 +6,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
+      - redis  # Add Redis dependency
   db:
     image: postgres
     environment:
@@ -14,3 +15,7 @@ services:
       POSTGRES_PASSWORD: your_database_password
     ports:
       - "5432:5432"
+  redis:
+    image: redis:alpine  # Using the lightweight Alpine image for Redis
+    ports:
+      - "6379:6379"  # Redis default port
