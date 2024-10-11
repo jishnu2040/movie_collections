@@ -35,6 +35,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # custome middleware
+    'your_app.middleware.RequestCountMiddleware',
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
