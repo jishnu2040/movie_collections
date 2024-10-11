@@ -8,5 +8,4 @@ urlpatterns = [
     path('collection/<uuid:collection_uuid>/', CollectionUpdateView.as_view(), name='collection-update'),
     path('collection/<uuid:collection_uuid>/delete/', CollectionDeleteView.as_view(), name='collection-delete'), 
     path('request-count/', RequestCountView.as_view(), name='request-count'),
-    path('request-count/reset/', RequestCountResetView.as_view(), name='request-count-reset'),
 ]
