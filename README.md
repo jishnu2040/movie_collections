@@ -2,6 +2,12 @@
 
 This repository contains the backend for the Movie Collection application, built with Django. You can set up and run this application in three different ways:
 
+## API Documentation
+
+This contains the whole documentaion of the api endpoints.
+
+https://documenter.getpostman.com/view/32963641/2sAXqy3erU
+
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
 2. [Setup Methods](#setup-methods)
