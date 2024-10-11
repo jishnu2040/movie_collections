@@ -6,7 +6,7 @@ This repository contains the backend for the Movie Collection application, built
 
 This contains the whole documentaion of the api endpoints.
 
-https://documenter.getpostman.com/view/32963641/2sAXqy3erU
+[https://documenter.getpostman.com/view/32963641/2sAXqy3erU](https://documenter.getpostman.com/view/32963641/2sAXxS6WZn)
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
