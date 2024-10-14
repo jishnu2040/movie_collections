@@ -37,7 +37,7 @@ class MovieView(APIView):
 
         for attempt in range(max_retries):
             try:
-                response = requests.get(url, auth=HTTPBasicAuth(verify=False))
+                response = requests.get(url, verify=False)
 
                 if response.ok:
                     return Response(response.json(), status=status.HTTP_200_OK)
