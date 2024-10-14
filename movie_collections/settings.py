@@ -88,29 +88,29 @@ WSGI_APPLICATION = 'movie_collections.wsgi.application'
 
 
 # database in docker
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'movie_collection',
-        'USER': 'movie_controler', 
-        'PASSWORD': 'postgres',   
-        'HOST': 'db',
-        'PORT': '5432',
-    }
-}
-
-
-# # database in local machine
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',  
-#         'NAME': 'movie_collection',                 
-#         'USER': 'postgres',                        
-#         'PASSWORD': '',                             
-#         'HOST': 'localhost',                         
-#         'PORT': '5432',                           
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'movie_collection',
+#         'USER': 'movie_controler', 
+#         'PASSWORD': 'postgres',   
+#         'HOST': 'db',
+#         'PORT': '5432',
 #     }
 # }
+
+
+# database in local machine
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',  
+        'NAME': 'movie_collection',                 
+        'USER': 'postgres',                        
+        'PASSWORD': '',                             
+        'HOST': 'localhost',                         
+        'PORT': '5432',                           
+    }
+}
 
 
 # Redis settings

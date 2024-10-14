@@ -1,6 +1,6 @@
 
 from django.urls import path
-from .views import CollectionListCreateView, MovieView, CollectionUpdateView, CollectionDeleteView, RequestCountView, RequestCountResetView
+from .views import CollectionListCreateView, MovieView, CollectionUpdateView, CollectionDeleteView, RequestCountView
 
 urlpatterns = [
     path('collection/', CollectionListCreateView.as_view(), name='collection-list-create'),
