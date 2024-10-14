@@ -26,7 +26,7 @@ This contains the whole documentaion of the api endpoints.
 ### 1. Pull Docker Image from Docker Hub
 
 To run the application using the Docker image hosted on Docker Hub, follow these steps:
-
+N/A : have to setup other image manually , so recommand to follow 2nd setup!!!
 1. Open your terminal.
 2. Pull the Docker image:
    ```bash
@@ -43,6 +43,7 @@ To run the application using the Docker image hosted on Docker Hub, follow these
 ```
 
 
+
 ### 2. Clone GitHub and Build and Run Docker Image
 
 To build and run the Docker image from the GitHub repository:
@@ -53,15 +54,15 @@ To build and run the Docker image from the GitHub repository:
 
 2.Navigate to the project directory:
 ```bash
-   cd MovieCollection_backend
+   cd movie_collections
 ```
 3.Build the Docker image:
 ```bash
-   docker build -t moviecollection_backend-web .
+   docker-compose up --build
 ```
-4.Run the Docker container:
+4.Migrate database:
 ```bash
-   docker run -d -p 8000:8000 moviecollection_backend-web
+   docker-compose exec web python manage.py migrate
 ```
 5.Access the application in your browser at:
 ```bash
