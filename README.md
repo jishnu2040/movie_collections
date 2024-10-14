@@ -49,7 +49,7 @@ To build and run the Docker image from the GitHub repository:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jishnu2040/MovieCollection_backend.git
+   git clone https://github.com/jishnu2040/movie_collections
 
 2.Navigate to the project directory:
 ```bash
@@ -75,11 +75,11 @@ To run the application in a local environment without Docker:
 1. **Clone the repository**:  
    Open your terminal and run:
    ```bash
-   git clone https://github.com/jishnu2040/MovieCollection_backend.git
+   git clone https://github.com/jishnu2040/movie_collections
 2.Navigate to the project directory:
 
 ```bash
-  cd MovieCollection_backend
+  cd movie_collections
 
 ```
 3.Create a virtual environment:
@@ -92,11 +92,9 @@ To run the application in a local environment without Docker:
 
 ```bash
   # For Linux/macOS
-python3 -m venv venv
 source venv/bin/activate
 
 # For Windows
-python -m venv venv
 venv\Scripts\activate
 
 ```
@@ -122,7 +120,7 @@ Create a Superuser (Optional)
 6.Start the server
 
 ```bash
-  http://localhost:8000
+  python manage.py runserver
 
 ```
 7.Change postgres config -> settings.py 
